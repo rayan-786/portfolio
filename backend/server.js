@@ -17,6 +17,12 @@ const contactRoutes = require("./routes/contactRoutes");
 
 app.use("/api", contactRoutes);
 
+// TEST ROUTE
+
+app.get("/", (req, res) => {
+  res.send("Backend Running 🚀");
+});
+
 // DATABASE CONNECTION
 
 mongoose
