@@ -28,8 +28,6 @@ mongoose
     console.log(err);
   });
 
-// SERVER
+// EXPORT APP FOR VERCEL
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on ${process.env.PORT}`);
-});
+module.exports = app;
