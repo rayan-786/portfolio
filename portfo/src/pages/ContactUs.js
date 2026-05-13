@@ -27,9 +27,9 @@ const handleSubmit = async (e) => {
   try {
 
     const response = await axios.post(
-      `${import.meta.env.VITE_URL}/api/contact`,
-      form
-    );
+  `${process.env.REACT_APP_URL}/api/contact`,
+  form
+);
 
     alert(response.data.message);
 
