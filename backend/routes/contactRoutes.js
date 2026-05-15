@@ -15,7 +15,7 @@ const contactLimiter = rateLimit({
 
   windowMs: 15 * 60 * 1000,
 
-  max: 1,
+  max: 5,
 message:{
   message:
     "Too many contact requests, try again later",
