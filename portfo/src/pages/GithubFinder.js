@@ -1,12 +1,14 @@
 import { useState } from "react";
 
 function GithubFinder() {
+
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const fetchUser = async () => {
+
     if (!username) return;
 
     setLoading(true);
@@ -14,24 +16,32 @@ function GithubFinder() {
     setUser(null);
 
     try {
-      const res = await fetch(`https://api.github.com/users/${username}`);
+
+      const res = await fetch(
+        `https://api.github.com/users/${username}`
+      );
 
       if (!res.ok) {
         throw new Error("User not found");
       }
 
       const data = await res.json();
+
       setUser(data);
 
     } catch (err) {
+
       setError("User not found ❌");
+
     }
 
     setLoading(false);
+
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#020617] text-white px-4 flex items-center justify-center">
+
+    <div className="relative min-h-screen overflow-hidden bg-[#020617] text-white px-4 py-10 flex items-center justify-center">
 
       {/* BACKGROUND GLOW */}
 
@@ -41,19 +51,20 @@ function GithubFinder() {
 
       {/* MAIN CONTAINER */}
 
-      <div className="relative w-full max-w-3xl rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-2xl">
+      <div className="relative w-full max-w-3xl rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-5 sm:p-8 shadow-2xl">
 
         {/* TITLE */}
 
         <div className="text-center">
 
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight break-words">
             GitHub Profile Finder
           </h1>
 
-          <p className="mt-4 text-slate-400 text-lg">
+          <p className="mt-4 text-slate-400 text-sm sm:text-lg break-words">
             Search any GitHub user and explore their profile 🚀
           </p>
+
         </div>
 
         {/* SEARCH */}
@@ -71,6 +82,8 @@ function GithubFinder() {
               bg-slate-950/70
               px-5
               py-4
+              text-sm
+              sm:text-base
               text-white
               outline-none
               transition-all
@@ -86,10 +99,14 @@ function GithubFinder() {
           <button
             onClick={fetchUser}
             className="
+              w-full
+              sm:w-auto
               rounded-2xl
               bg-cyan-400
               px-8
               py-4
+              text-sm
+              sm:text-base
               font-semibold
               text-slate-950
               transition-all
@@ -101,27 +118,33 @@ function GithubFinder() {
           >
             Search
           </button>
+
         </div>
 
         {/* LOADING */}
 
         {loading && (
-          <p className="mt-6 text-center text-cyan-400 animate-pulse">
+
+          <p className="mt-6 text-center text-cyan-400 animate-pulse text-sm sm:text-base">
             Loading...
           </p>
+
         )}
 
         {/* ERROR */}
 
         {error && (
-          <p className="mt-6 text-center text-red-400">
+
+          <p className="mt-6 text-center text-red-400 text-sm sm:text-base break-words">
             {error}
           </p>
+
         )}
 
         {/* USER CARD */}
 
         {user && (
+
           <div
             className="
               mt-10
@@ -129,7 +152,8 @@ function GithubFinder() {
               border
               border-white/10
               bg-slate-900/60
-              p-8
+              p-5
+              sm:p-8
               shadow-xl
               backdrop-blur-lg
             "
@@ -143,8 +167,10 @@ function GithubFinder() {
                 src={user.avatar_url}
                 alt="profile"
                 className="
-                  h-32
-                  w-32
+                  h-28
+                  w-28
+                  sm:h-32
+                  sm:w-32
                   rounded-full
                   border-4
                   border-cyan-400
@@ -155,17 +181,17 @@ function GithubFinder() {
 
               {/* INFO */}
 
-              <div className="flex-1 text-center sm:text-left">
+              <div className="flex-1 text-center sm:text-left break-words">
 
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-2xl sm:text-3xl font-bold break-words">
                   {user.name || user.login}
                 </h2>
 
-                <p className="mt-1 text-slate-400 text-lg">
+                <p className="mt-1 text-slate-400 text-sm sm:text-lg break-all">
                   @{user.login}
                 </p>
 
-                <p className="mt-4 text-slate-300 leading-7">
+                <p className="mt-4 text-sm sm:text-base text-slate-300 leading-7 break-words">
                   {user.bio || "No bio available"}
                 </p>
 
@@ -173,15 +199,15 @@ function GithubFinder() {
 
                 <div className="mt-6 flex flex-wrap gap-3 justify-center sm:justify-start">
 
-                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-sm">
+                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-xs sm:text-sm">
                     👥 {user.followers} Followers
                   </div>
 
-                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-sm">
+                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-xs sm:text-sm">
                     📁 {user.public_repos} Repositories
                   </div>
 
-                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-sm">
+                  <div className="rounded-full bg-cyan-400/10 px-4 py-2 text-cyan-300 text-xs sm:text-sm">
                     👤 {user.following} Following
                   </div>
 
@@ -196,12 +222,17 @@ function GithubFinder() {
                   className="
                     inline-block
                     mt-6
+                    w-full
+                    sm:w-auto
                     rounded-xl
                     bg-cyan-400
                     px-6
                     py-3
+                    text-sm
+                    sm:text-base
                     font-semibold
                     text-slate-950
+                    text-center
                     transition-all
                     duration-300
                     hover:bg-cyan-300
@@ -212,11 +243,17 @@ function GithubFinder() {
                 </a>
 
               </div>
+
             </div>
+
           </div>
+
         )}
+
       </div>
+
     </div>
+
   );
 }
 

@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutUs';
 import ContactPage from './pages/ContactUs';
 import HomePage from './pages/Home';
 import GithubFinder from "./pages/GithubFinder";
-import Form from './pages/Form';
+
 
 
 
@@ -29,7 +29,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/github" element={<GithubFinder />} />
-            <Route path="/from" element={<Form />} />
+            
            
           
 
