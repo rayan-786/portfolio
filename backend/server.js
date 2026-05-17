@@ -1,24 +1,18 @@
 const dotenv = require("dotenv");
 dotenv.config();
+
 const express = require("express");
-
 const mongoose = require("mongoose");
-
 const cors = require("cors");
-
-
-
 const helmet = require("helmet");
-
-const rateLimit = require("express-rate-limit");
-
-
 
 
 // APP CREATE
 
 const app = express();
+
 app.set("trust proxy", 1);
+
 
 // HELMET
 
@@ -51,30 +45,39 @@ app.get("/", (req, res) => {
 });
 
 
+// PORT
+
+const PORT = process.env.PORT || 5000;
+
+
 // DATABASE CONNECTION
+
+console.log("Connecting to MongoDB...");
 
 mongoose
   .connect(process.env.MONGO_URL)
 
   .then(() => {
 
-    console.log("MongoDB Connected");
+    console.log("MongoDB Connected ✅");
+
+    // START SERVER ONLY AFTER DB CONNECTS
+
+    app.listen(PORT, () => {
+
+      console.log(`Server running on port ${PORT} 🚀`);
+
+    });
 
   })
 
   .catch((err) => {
 
+    console.log("MongoDB Connection Error ❌");
+
     console.log(err);
 
   });
-
-  const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-
-  console.log(`Server running on port ${PORT}`);
-
-});
 
 
 // EXPORT APP
