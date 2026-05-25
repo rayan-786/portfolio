@@ -59,7 +59,7 @@ function Navbar() {
           {/* RESUME */}
 
           <a
-            href="/portfo/public/resume.pdf"
+            href="/resume.pdf"
             download
             className="cursor-pointer hover:text-white whitespace-nowrap"
           >
