@@ -29,13 +29,6 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/github" element={<GithubFinder />} />
-            
-           
-          
-
-
-
-           
           </Routes>
         </div>
         <Footer />
