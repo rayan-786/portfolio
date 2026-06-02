@@ -5,35 +5,43 @@ function ProjectsPreview() {
   const projects = [
     {
       title: "Project One",
-      tag: "Landing Page",
+      tag: "Task-Management System",
       desc:
-        "A clean, modern landing page built with React and Tailwind CSS. It focuses on strong visual hierarchy, smooth spacing, and a mobile-first layout.",
+        "Built a full-stack task management application using React.js, Node.js, Express.js and MongoDB with JWT authentication, OTP-based password reset, protected routes role base access control.",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+      demoLink: "https://rayan-auth.vercel.app",
+      learnMoreLink: "/task-management",
     },
     {
       title: "Project Two",
       tag: "GitHub Profile Finder",
       desc:
-        "A responsive dashboard interface with reusable cards, polished sections, and a practical layout designed for productivity and clarity.",
+        "Developed GitHub Finder web application that allows users t search and explore GitHub profiles in real time using the Github API.",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        demoLink: "/github",
+        learnMoreLink: "/github",
     },
     {
       title: "Project Three",
       tag: "Portfolio Website",
       desc:
-        "A personal portfolio website that highlights skills, projects, and contact details while keeping the design simple, elegant, and professional.",
+        "Built and developed a responsive portfolio website using React.js, and TailwindCSS to showcase projects, technical skills, and contact information.Integrated SMTP-based contact form and stored user messages in MongoDB.",
       image:
         "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+        demoLink: "https://rayan.website",
+        learnMoreLink: "/about",
     },
     {
       title: "Project Four",
-      tag: "Business Website",
+      tag: "ATS Resume Checker",
       desc:
-        "A business-oriented website section with strong CTA placement, responsive content blocks, and a refined visual style for client-facing work.",
+        "Built an AI-powered Resume Analyzer using React, Typescript, and Gemini AI API, enabling users to upload resumes and receive ATS scores with detailed AI-generated recommendations..",
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+        demoLink: "https://resumetest.duckdns.org",
+        learnMoreLink: "/resume-ai",
     },
   ];
 
@@ -139,26 +147,26 @@ function ProjectsPreview() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/github"
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
                 >
                   Demo
                 </motion.a>
 
-                <motion.a
-                  initial={{ opacity: 0, x: 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7 }}
-                  viewport={{ once: true }}
-
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-
-                  href="/about"
-                  className="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
-                >
-                  Learn More
-                </motion.a>
+               <motion.a
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href={project.learnMoreLink}
+                className="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
+              >
+                Learn More
+              </motion.a>
 
               </div>
 
