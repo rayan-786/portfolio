@@ -36,7 +36,7 @@ function ProjectsPreview() {
      
       tag: "GitHub Profile Finder",
       desc:
-        "Developed GitHub Finder web application that allows users t search and explore GitHub profiles in real time using the Github API.",
+        "Developed GitHub Finder web application that allows users  search and explore GitHub profiles in real time using the Github API.",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
         demoLink: "/github",
