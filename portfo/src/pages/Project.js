@@ -4,44 +4,43 @@ function ProjectsPreview() {
 
   const projects = [
     {
-      title: "Project One",
       tag: "Task-Management System",
       desc:
         "Built a full-stack task management application using React.js, Node.js, Express.js and MongoDB with JWT authentication, OTP-based password reset, protected routes role base access control.",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
       demoLink: "https://rayan-auth.vercel.app",
-      learnMoreLink: "/task-management",
+      GitHubLink: "https://github.com/rayan-786/task-management",
     },
     {
-      title: "Project Two",
-      tag: "GitHub Profile Finder",
-      desc:
-        "Developed GitHub Finder web application that allows users t search and explore GitHub profiles in real time using the Github API.",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-        demoLink: "/github",
-        learnMoreLink: "/github",
-    },
-    {
-      title: "Project Three",
-      tag: "Portfolio Website",
-      desc:
-        "Built and developed a responsive portfolio website using React.js, and TailwindCSS to showcase projects, technical skills, and contact information.Integrated SMTP-based contact form and stored user messages in MongoDB.",
-      image:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
-        demoLink: "https://rayan.website",
-        learnMoreLink: "/about",
-    },
-    {
-      title: "Project Four",
+     
       tag: "ATS Resume Checker",
       desc:
         "Built an AI-powered Resume Analyzer using React, Typescript, and Gemini AI API, enabling users to upload resumes and receive ATS scores with detailed AI-generated recommendations..",
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
         demoLink: "https://resumetest.duckdns.org",
-        learnMoreLink: "/resume-ai",
+        GitHubLink: "https://github.com/rayan-786/resume.ai",
+    },
+    {
+  
+      tag: "Portfolio Website",
+      desc:
+        "Built and developed a responsive portfolio website using React.js, and TailwindCSS to showcase projects, technical skills, and contact information.Integrated SMTP-based contact form and stored user messages in MongoDB.",
+      image:
+        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+        demoLink: "https://rayan.website",
+        GitHubLink: "https://github.com/rayan-786/portfolio",
+    },
+    {
+     
+      tag: "GitHub Profile Finder",
+      desc:
+        "Developed GitHub Finder web application that allows users t search and explore GitHub profiles in real time using the Github API.",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        demoLink: "/github",
+        GitHubLink: "/github",
     },
   ];
 
@@ -152,7 +151,7 @@ function ProjectsPreview() {
                   rel="noopener noreferrer"
                   className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
                 >
-                  Demo
+                  Live Demo
                 </motion.a>
 
                <motion.a
@@ -162,10 +161,10 @@ function ProjectsPreview() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href={project.learnMoreLink}
+                href={project.GitHubLink}
                 className="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
               >
-                Learn More
+                GitHub
               </motion.a>
 
               </div>

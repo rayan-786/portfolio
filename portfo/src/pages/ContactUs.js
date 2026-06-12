@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 function ContactPreview() {
 
@@ -105,7 +106,7 @@ function ContactPreview() {
                 📍
               </span>{" "}
 
-              Sion, Mumbai(Maharashtra)-400017
+              Mumbai, India
 
             </p>
 
@@ -115,10 +116,37 @@ function ContactPreview() {
                 🟢
               </span>{" "}
 
-              Looking for Internships and Opportunities
-              in Web Development
+              Open to Full Stack & Software Development Internships
 
             </p>
+         <div className="flex gap-4 pt-2 justify-start">
+
+            <a
+              href="https://linkedin.com/in/rayan-ahmad786"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-blue-500 transition duration-300"
+            >
+              <FaLinkedin size={20} />
+            </a>
+
+            <a
+              href="https://github.com/rayan-786"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-white transition duration-300"
+            >
+              <FaGithub size={20} />
+            </a>
+
+            <a
+              href="mailto:ansarirayan86@gmail.com"
+              className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-red-400 transition duration-300"
+            >
+              <FaEnvelope size={20} />
+            </a>
+
+          </div>
 
           </div>
 
