@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import rayanImage from "../assets/rayan.jpg.jpeg"
+import rayanImage from "../assets/rayan.jpg.png"
 function Hero() {
 
   return (
