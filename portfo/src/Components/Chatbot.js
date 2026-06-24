@@ -29,7 +29,7 @@ function Chatbot() {
 
     try {
       const res = await axios.post(
-      `${process.env.REACT_APP_URL}/api/chat`,
+  "https://legend-back.duckdns.org/api/chat",
       {
         message: currentMessage,
       }
