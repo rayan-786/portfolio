@@ -5,11 +5,18 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const helmet = require("helmet");
+const chatbotRoutes = require("./routes/chatbotRoutes")
+const contactRoutes = require("./routes/contactRoutes");
+
+
+
 
 
 // APP CREATE
 
 const app = express();
+
+
 
 app.set("trust proxy", 1);
 
@@ -31,9 +38,10 @@ app.use(express.json());
 
 // ROUTES
 
-const contactRoutes = require("./routes/contactRoutes");
+
 
 app.use("/api", contactRoutes);
+app.use("/api", chatbotRoutes);
 
 
 // TEST ROUTE
