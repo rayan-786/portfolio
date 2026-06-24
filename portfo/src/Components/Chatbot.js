@@ -29,11 +29,11 @@ function Chatbot() {
 
     try {
       const res = await axios.post(
-        process.env.REACT_APP_URL,
-        {
-          message: currentMessage,
-        }
-      );
+      `${process.env.REACT_APP_URL}/api/chat`,
+      {
+        message: currentMessage,
+      }
+    );
 
       setMessages((prev) => [
         ...prev,
@@ -175,5 +175,6 @@ function Chatbot() {
     </>
   );
 }
+
 
 export default Chatbot;
