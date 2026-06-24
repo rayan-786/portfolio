@@ -1,142 +1,94 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-
-function Footer() {
+function AboutPreview() {
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-white/10">
+    <section
+      id="about"
+      className="border-t border-white/10 bg-slate-900/40 overflow-hidden"
+    >
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        {/* TOP CONTENT */}
 
-        {/* MAIN GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="mb-12 max-w-4xl">
 
-          {/* LEFT */}
-          <div className="text-center md:text-left">
+          <h2 className="text-3xl font-bold sm:text-4xl text-orange-300">
+            About Me
+          </h2>
 
-            <h2 className="text-2xl font-bold text-white">
-              Rayan Ahmad
-            </h2>
-
-            <p className="mt-4 text-sm leading-7 text-slate-400 max-w-xs mx-auto md:mx-0">
-              Full Stack Developer passionate about building
-              modern, responsive and scalable web applications.
-            </p>
-
-          </div>
-
-          {/* CENTER */}
-          <div className="text-center">
-
-            <h3 className="text-white font-semibold mb-4">
-              Quick Links
-            </h3>
-
-            <div className="flex flex-wrap justify-center gap-4 md:flex-col md:gap-3">
-
-              <a
-                href="/"
-                className="hover:text-cyan-400 transition"
-              >
-                Home
-              </a>
-
-              <a
-                href="/about"
-                className="hover:text-cyan-400 transition"
-              >
-                About
-              </a>
-
-              <a
-                href="/projects"
-                className="hover:text-cyan-400 transition"
-              >
-                Projects
-              </a>
-
-              <a
-                href="/contact"
-                className="hover:text-cyan-400 transition"
-              >
-                Contact
-              </a>
-
-            </div>
-
-          </div>
-
-          {/* RIGHT */}
-          <div className="text-center md:text-right">
-
-            <h3 className="text-white font-semibold mb-4">
-              Contact
-            </h3>
-
-            <p className="text-sm break-all">
-              📧 ansarirayan86@gmail.com
-            </p>
-
-            <p className="mt-3">
-              📍 Mumbai, India
-            </p>
-
-            <p className="mt-3 text-green-400 font-medium">
-              🟢 Available for Internships
-            </p>
-
-            {/* SOCIAL ICONS */}
-            <div className="flex justify-center md:justify-end gap-3 mt-5">
-
-              <a
-                href="https://linkedin.com/in/rayan-ahmad786"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-blue-500 transition"
-              >
-                <FaLinkedin size={18} />
-              </a>
-
-              <a
-                href="https://github.com/rayan-786"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-white transition"
-              >
-                <FaGithub size={18} />
-              </a>
-
-              <a
-                href="mailto:ansarirayan86@gmail.com"
-                className="p-3 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-red-400 transition"
-              >
-                <FaEnvelope size={18} />
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* COPYRIGHT */}
-        <div className="border-t border-white/10 mt-8 pt-6 text-center">
-
-          <p className="text-sm">
-            © 2026 Rayan Ahmad. All rights reserved.
+          <p className="mt-6 mb-4 leading-7 text-sm sm:text-base">
+            I am a BSc IT student and Full Stack Developer passionate about
+            building scalable web applications and cloud-based solutions.
+            I enjoy transforming ideas into real-world products with clean code,
+            responsive design, and modern development practices.
           </p>
 
-          <p className="text-sm mt-2 text-slate-400">
-            Built with React, Tailwind CSS & Node
+          <p className="mb-4 leading-7 text-sm sm:text-base">
+            My experience includes developing frontend applications using
+            React, TypeScript, JavaScript, and Tailwind CSS, along with
+            backend development using Node.js and Express.js. I focus on
+            creating fast, user-friendly, and maintainable applications.
+          </p>
+
+          <p className="mb-4 leading-7 text-sm sm:text-base">
+            Beyond development, I have hands-on experience with AWS EC2,
+            AWS S3, Docker, Nginx, and PM2 for deployment, hosting,
+            and server management. I enjoy learning how modern applications
+            are built, deployed, and scaled in production environments.
+          </p>
+
+          <p className="text-cyan-400 font-medium text-sm sm:text-base">
+            Tech Stack: React • TypeScript • Node.js • Express.js • MongoDB • AWS • Docker • Nginx • PM2
+          </p>
+
+          <p className="mt-4 text-cyan-400 font-medium text-sm sm:text-base">
+            Goal: Become a Full Stack Developer capable of building,
+            deploying, and scaling production-ready applications.
+          </p>
+
+          <p className="mt-6 italic text-slate-400 text-sm sm:text-base">
+            Always learning. Always building. Improving every day 🚀
           </p>
 
         </div>
 
-        {/* GRADIENT LINE */}
-        <div className="mt-6 h-[2px] w-full rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"></div>
+        {/* CARDS */}
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg hover:border-cyan-400/30 transition-all duration-300">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Full Stack Development
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Building responsive frontend applications with React and scalable backend services using Node.js and Express.js.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg hover:border-cyan-400/30 transition-all duration-300">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Cloud & Deployment
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Hands-on experience with AWS EC2, AWS S3, Docker, Nginx, and PM2 for deployment, hosting, and server management.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg hover:border-cyan-400/30 transition-all duration-300">
+            <h3 className="text-lg sm:text-xl font-semibold">
+              Clean & Responsive UI
+            </h3>
+
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Creating modern, mobile-friendly interfaces with reusable components, accessibility, and performance in mind.
+            </p>
+          </div>
+
+        </div>
 
       </div>
-
-    </footer>
+    </section>
   );
 }
 
-export default Footer;
+export default AboutPreview;

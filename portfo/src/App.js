@@ -2,7 +2,7 @@ import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import ProjectsPage from "./pages/Project";
-import AboutPage from "./pages/AboutUs";
+import AboutPreview from "./pages/AboutUs";
 import ContactPage from "./pages/ContactUs";
 import HomePage from "./pages/Home";
 import GithubFinder from "./pages/GithubFinder";
@@ -19,7 +19,7 @@ function App() {
         <main className="flex-grow pt-16">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="/about" element={<AboutPreview />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/github" element={<GithubFinder />} />
