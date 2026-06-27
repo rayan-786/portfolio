@@ -59,13 +59,18 @@ const submitContact = async (req, res) => {
 
         <p>Thanks for contacting us.</p>
 
-        <p>AAPKA bhut bhut shukriya.</p>
+        <p> I have successfully received your message. I will review it and get back to you as soon as possible.</p>
 
         <br/>
 
-        <p>MY NAME IS RAYAN AHMAD aapse milke accha laga</p>
+        <p> Thank you for visiting my portfolio and taking the time to reach out.</p>
 
         <br/>
+        <p>
+            Best Regards,<br />
+            <strong>Rayan Ahmad</strong><br />
+            Full Stack Developer
+          </p>
 
         <h4>Your Message:</h4>
 
